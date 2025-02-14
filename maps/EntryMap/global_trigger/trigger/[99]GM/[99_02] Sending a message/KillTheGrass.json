@@ -1,0 +1,180 @@
+{
+    "action": [
+        {
+            "action_type": "SELECT_DEST_IN_SHAPER_DO_ACTION", 
+            "args_list": [
+                {
+                    "arg_type": 100004, 
+                    "args_list": [
+                        {
+                            "arg_type": 100006, 
+                            "args_list": [
+                                {
+                                    "__tuple__": true, 
+                                    "items": [
+                                        "UNIT_ENTITY", 
+                                        "Player Unit"
+                                    ]
+                                }, 
+                                {
+                                    "arg_type": 100002, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 100025, 
+                                            "args_list": [], 
+                                            "sub_type": "TRIGGER_PLAYER"
+                                        }
+                                    ], 
+                                    "sub_type": "PLAYER_ID_NUMBER"
+                                }
+                            ], 
+                            "sub_type": 11
+                        }
+                    ], 
+                    "sub_type": "UNIT_ENTITY_POINT"
+                }, 
+                {
+                    "arg_type": 100211, 
+                    "args_list": [
+                        {
+                            "arg_type": 100000, 
+                            "args_list": [
+                                400.0
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "sub_type": "CONST_CIRCULAR_SHAPE"
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "IF_THEN_ELSE", 
+                            "args_list": [
+                                {
+                                    "arg_type": 100021, 
+                                    "args_list": [
+                                        {
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100207, 
+                                                    "args_list": [
+                                                        {
+                                                            "arg_type": 100205, 
+                                                            "args_list": [], 
+                                                            "sub_type": "ITER_DESTRUCTIBLE"
+                                                        }
+                                                    ], 
+                                                    "sub_type": "GET_DESTRUCTIBLE_NAME"
+                                                }, 
+                                                {
+                                                    "arg_type": 100035, 
+                                                    "args_list": [
+                                                        "=="
+                                                    ], 
+                                                    "sub_type": 1
+                                                }, 
+                                                {
+                                                    "arg_type": 100207, 
+                                                    "args_list": [
+                                                        {
+                                                            "__tuple__": true, 
+                                                            "items": [
+                                                                "DESTRUCTIBLE_NAME", 
+                                                                "本关卡草丛类型"
+                                                            ]
+                                                        }
+                                                    ], 
+                                                    "sub_type": 2
+                                                }
+                                            ], 
+                                            "condition_type": "DESTRUCTIBLE_TYPE_COMPARE", 
+                                            "element_id": 62685339000035, 
+                                            "enable": true
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [
+                                        {
+                                            "action_type": "KILL_DEST", 
+                                            "args_list": [
+                                                {
+                                                    "arg_type": 100205, 
+                                                    "args_list": [], 
+                                                    "sub_type": "ITER_DESTRUCTIBLE"
+                                                }, 
+                                                {
+                                                    "arg_type": 100006, 
+                                                    "args_list": [], 
+                                                    "sub_type": "NONE_UNIT"
+                                                }
+                                            ], 
+                                            "bp": false, 
+                                            "element_id": 62685339000060, 
+                                            "enable": true
+                                        }
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100022, 
+                                    "args_list": [], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 62685339000025, 
+                            "enable": true, 
+                            "fake_op": [
+                                2
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 62685339000008, 
+            "enable": true, 
+            "op_arg": [
+                null
+            ], 
+            "op_arg_enable": [
+                false
+            ]
+        }
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": false, 
+    "event": [
+        {
+            "args_list": [
+                {
+                    "arg_type": 200220, 
+                    "args_list": [
+                        59
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "element_id": 62685339000002, 
+            "enable": true, 
+            "event_type": "KEYBOARD_KEY_DOWN_EVENT"
+        }
+    ], 
+    "group_id": "fWS-lHo2Ee+sjE-rNnFY-5", 
+    "p_trigger_id": null, 
+    "trigger_id": 62685339, 
+    "trigger_name": "KillTheGrass", 
+    "valid": true, 
+    "var_data": [
+        {}, 
+        {}, 
+        []
+    ]
+}

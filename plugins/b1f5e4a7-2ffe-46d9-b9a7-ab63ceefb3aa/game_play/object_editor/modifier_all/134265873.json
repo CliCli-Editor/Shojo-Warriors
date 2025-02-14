@@ -1,0 +1,229 @@
+{
+    "local_variable": {
+        "198189060": {
+            "variable_dict": {}, 
+            "variable_length_dict": {}
+        }, 
+        "466464771": {
+            "variable_dict": {}, 
+            "variable_length_dict": {}
+        }, 
+        "645177345": {
+            "variable_dict": {}, 
+            "variable_length_dict": {}
+        }
+    }, 
+    "trigger_dict": {
+        "198189060": {
+            "action": [
+                {
+                    "action_type": "UNREG_TRIGGER", 
+                    "args_list": [
+                        {
+                            "arg_type": 100178, 
+                            "args_list": [
+                                [
+                                    "DYNAMIC_TRIGGER_INSTANCE", 
+                                    "Free control", 
+                                    "actor"
+                                ]
+                            ], 
+                            "sub_type": "VARIABLE"
+                        }
+                    ], 
+                    "bp": false, 
+                    "element_id": 1981890600005, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 1981890600002, 
+                    "enable": true, 
+                    "event_type": "LOSS_MODIFIER"
+                }
+            ], 
+            "group_id": 134265873, 
+            "p_trigger_id": null, 
+            "trigger_id": 198189060, 
+            "trigger_name": "New Trigger 2", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
+        "466464771": {
+            "action": [
+                {
+                    "action_type": "PREVENT_OBTAIN_MODIFIER", 
+                    "args_list": [], 
+                    "bp": false, 
+                    "element_id": 4664647710008, 
+                    "enable": true
+                }
+            ], 
+            "call_enabled": true, 
+            "condition": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100076, 
+                            "args_list": [], 
+                            "sub_type": "GET_MODIFIER_FROM_EVENT"
+                        }, 
+                        {
+                            "arg_type": 100003, 
+                            "args_list": [
+                                "control"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "condition_type": "PROJECTILE_HAS_TAG", 
+                    "element_id": 4664647710005, 
+                    "enable": true
+                }
+            ], 
+            "enabled": false, 
+            "event": [
+                {
+                    "args_list": [
+                        {
+                            "arg_type": 100129, 
+                            "args_list": [
+                                "ET_MODIFIER_GET_BEFORE_CREATE"
+                            ], 
+                            "sub_type": 1
+                        }
+                    ], 
+                    "element_id": 4664647710002, 
+                    "enable": true, 
+                    "event_type": "GLOBAL_MODIFIER_EVENT"
+                }
+            ], 
+            "group_id": 134265873, 
+            "is_conf": true, 
+            "p_trigger_id": 645177345, 
+            "sub_trigger_owner_set_var_action": {
+                "action_type": "SET_VARIABLE", 
+                "args_list": [
+                    {
+                        "arg_type": 100178, 
+                        "args_list": [
+                            [
+                                "DYNAMIC_TRIGGER_INSTANCE", 
+                                "Free control", 
+                                "actor"
+                            ]
+                        ], 
+                        "sub_type": "VARIABLE"
+                    }, 
+                    {
+                        "arg_type": 100178, 
+                        "args_list": [
+                            {
+                                "arg_type": 100069, 
+                                "args_list": [
+                                    466464771
+                                ], 
+                                "sub_type": 1
+                            }
+                        ], 
+                        "sub_type": "REG_MODIFIER_TRIGGER"
+                    }
+                ], 
+                "bp": false, 
+                "element_id": 645177345450004, 
+                "enable": true
+            }, 
+            "trigger_id": 466464771, 
+            "trigger_name": "SubTrigger", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }, 
+        "645177345": {
+            "action": [
+                466464771
+            ], 
+            "call_enabled": true, 
+            "condition": [], 
+            "enabled": true, 
+            "event": [
+                {
+                    "args_list": [], 
+                    "element_id": 6451773450002, 
+                    "enable": true, 
+                    "event_type": "OBTAIN_MODIFIER"
+                }
+            ], 
+            "group_id": 134265873, 
+            "p_trigger_id": null, 
+            "trigger_id": 645177345, 
+            "trigger_name": "New Trigger", 
+            "valid": true, 
+            "var_data": [
+                {}, 
+                {}, 
+                []
+            ]
+        }
+    }, 
+    "trigger_group_info": [
+        {
+            "__tuple__": true, 
+            "items": [
+                466464771, 
+                "SubTrigger"
+            ]
+        }, 
+        {
+            "_trigger_group_": true, 
+            "group": [
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        198189060, 
+                        "New Trigger 2"
+                    ]
+                }, 
+                {
+                    "__tuple__": true, 
+                    "items": [
+                        645177345, 
+                        "New Trigger"
+                    ]
+                }
+            ], 
+            "key": 134265873, 
+            "name": "134265873"
+        }
+    ], 
+    "trigger_version": "1.2", 
+    "variable_dict": {
+        "DYNAMIC_TRIGGER_INSTANCE": {
+            "Free control": 0
+        }
+    }, 
+    "variable_group_info": [
+        {
+            "__tuple__": true, 
+            "items": [
+                "Free control", 
+                "(Exemption from control)"
+            ]
+        }
+    ], 
+    "variable_length_dict": {
+        "Free control": 0
+    }
+}

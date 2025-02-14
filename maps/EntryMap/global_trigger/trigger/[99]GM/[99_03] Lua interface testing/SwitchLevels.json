@@ -1,0 +1,174 @@
+{
+    "action": [
+        {
+            "action_type": "SET_VARIABLE", 
+            "args_list": [
+                {
+                    "arg_type": 100030, 
+                    "args_list": [
+                        {
+                            "__tuple__": true, 
+                            "items": [
+                                "MAP", 
+                                "当前关卡", 
+                                "local"
+                            ]
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 900002, 
+                    "args_list": [], 
+                    "sub_type": "GET_CURRENT_LEVEL"
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1594949778000026, 
+            "enable": true
+        }, 
+        {
+            "action_type": "IF_THEN_ELSE", 
+            "args_list": [
+                {
+                    "arg_type": 100021, 
+                    "args_list": [
+                        {
+                            "args_list": [
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 900002, 
+                                            "args_list": [
+                                                {
+                                                    "__tuple__": true, 
+                                                    "items": [
+                                                        "MAP", 
+                                                        "当前关卡", 
+                                                        "local"
+                                                    ]
+                                                }
+                                            ], 
+                                            "sub_type": 2
+                                        }
+                                    ], 
+                                    "sub_type": "ANY_VAR_TO_STR"
+                                }, 
+                                {
+                                    "arg_type": 100035, 
+                                    "args_list": [
+                                        "=="
+                                    ], 
+                                    "sub_type": 1
+                                }, 
+                                {
+                                    "arg_type": 100003, 
+                                    "args_list": [
+                                        {
+                                            "arg_type": 900002, 
+                                            "args_list": [
+                                                "c77f71a2-560a-11ef-980e-650d0812c702"
+                                            ], 
+                                            "sub_type": 1
+                                        }
+                                    ], 
+                                    "sub_type": "ANY_VAR_TO_STR"
+                                }
+                            ], 
+                            "condition_type": "STRING_COMPARE", 
+                            "element_id": 1594949778000037, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "REQUEST_SWITCH_LEVEL", 
+                            "args_list": [
+                                {
+                                    "arg_type": 900002, 
+                                    "args_list": [
+                                        "535f5158-7956-11ef-bff9-d553a952ebe7"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1594949778000008, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }, 
+                {
+                    "arg_type": 100022, 
+                    "args_list": [
+                        {
+                            "action_type": "REQUEST_SWITCH_LEVEL", 
+                            "args_list": [
+                                {
+                                    "arg_type": 900002, 
+                                    "args_list": [
+                                        "c77f71a2-560a-11ef-980e-650d0812c702"
+                                    ], 
+                                    "sub_type": 1
+                                }
+                            ], 
+                            "bp": false, 
+                            "element_id": 1594949778000022, 
+                            "enable": true
+                        }
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "bp": false, 
+            "element_id": 1594949778000013, 
+            "enable": true, 
+            "fake_op": [
+                2
+            ]
+        }
+    ], 
+    "call_enabled": true, 
+    "condition": [], 
+    "enabled": false, 
+    "event": [
+        {
+            "args_list": [
+                {
+                    "arg_type": 100003, 
+                    "args_list": [
+                        "SwitchLevels"
+                    ], 
+                    "sub_type": 1
+                }
+            ], 
+            "element_id": 1594949778000002, 
+            "enable": true, 
+            "event_type": "ROLE_INPUT_MSG"
+        }
+    ], 
+    "group_id": "-Ra863llEe+pUdVTqVLr52", 
+    "p_trigger_id": null, 
+    "trigger_id": 1594949778, 
+    "trigger_name": "SwitchLevels", 
+    "valid": true, 
+    "var_data": [
+        {
+            "MAP": {
+                "当前关卡": null
+            }
+        }, 
+        {
+            "当前关卡": 0
+        }, 
+        [
+            "当前关卡"
+        ]
+    ]
+}

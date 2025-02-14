@@ -1,0 +1,7 @@
+require 'y3-helper.meta.unitAttrs'
+require 'y3-helper.meta.playerAttrs'
+require 'y3-helper.meta.customEvents'
+require 'y3-helper.meta.ui'
+require 'y3-helper.meta.uiAnim'
+require 'y3-helper.meta.jumpword'
+require 'y3-helper.meta.font'
