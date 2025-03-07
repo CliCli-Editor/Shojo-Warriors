@@ -19,7 +19,7 @@ function GameTools.MakerValueReturnTable(tTable,nKey,sName)
             local sString = tTable[nKey][sName]
             tNewTable = rwAllToolsFunc.AbilitysValueToTable(sString)
         else
-            print("err:表中没有key："..nKey.."。或者表中没有"..sName.."这个键值。")
+            print("err: key ["..nKey.."] or ["..sName.."] not in talbe !")
         end
     end
     return tNewTable

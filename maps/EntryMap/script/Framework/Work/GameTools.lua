@@ -19,7 +19,7 @@ function GameTools.MakerValueReturnTable(tTable,nKey,sName)
             local sString = tTable[nKey][sName]
             tNewTable = rwAllToolsFunc.AbilitysValueToTable(sString)
         else
-            -- print("err: key ["..nKey.."] or ["..sName.."] not in talbe !")
+            print("err: key ["..nKey.."] or ["..sName.."] not in talbe !")
         end
     end
     return tNewTable

@@ -32,32 +32,32 @@ AbilityAttr.UpdateAbilityInUnitPersonAttr(nPlayerId, tLua_unit,nSlotId,sSkillTag
 ]]
 
 --技能属性类型--
-local tAbilityAttrType = {
-    [1] = "基础伤害倍率",
-    [2] = "基础伤害充能",
-    [3] = "攻击范围",
-    [4] = "范围影响参数",
-    [5] = "子弹效果范围",
-    [6] = "子弹个数",
-    [7] = "子弹速度",
-    [8] = "弹射次数",
-    [9] = "技能持续时间",
-    [10] = "子弹碰撞",
-    [11] = "EX充能次数"
-    }
+-- local tAbilityAttrType = {
+--     [1] = "基础伤害倍率",
+--     [2] = "基础伤害充能",
+--     [3] = "攻击范围",
+--     [4] = "范围影响参数",
+--     [5] = "子弹效果范围",
+--     [6] = "子弹个数",
+--     [7] = "子弹速度",
+--     [8] = "弹射次数",
+--     [9] = "技能持续时间",
+--     [10] = "子弹碰撞",
+--     [11] = "EX充能次数"
+--     }
     
     --技能物编内自定义属性，与下面固定属性加起来应该是完整的技能属性类型
     local tPersonAlizeAbilityAttrType = {
-        [1] = "基础伤害倍率",
-        [2] = "基础伤害充能",
-        [3] = "范围影响参数",
-        [4] = "子弹效果范围",
-        [5] = "子弹个数",
-        [6] = "子弹速度",
-        [7] = "弹射次数",
-        [8] = "技能持续时间",
-        [9] = "子弹碰撞",
-        [10] = "EX充能次数"
+        [1] = "Basicdamagemultiplier",  -- 基础伤害倍率
+        [2] = "Basicdamagecharging",    -- 基础伤害充能
+        [3] = "Scopeaffectsparameters", -- 范围影响参数
+        [4] = "Bulleteffectrange",      -- 子弹效果范围
+        [5] = "Numberofbullets",        -- 子弹个数
+        [6] = "Bulletspeed",            -- 子弹速度
+        [7] = "Numberofcatapults",      -- 弹射次数
+        [8] = "Skillduration",          -- 技能持续时间
+        [9] = "Bulletcollision",        -- 子弹碰撞
+        [10] = "Exchargingtimes"        -- EX充能次数
     }
     
     --技能物编内固定属性
@@ -141,7 +141,7 @@ function AbilityAttr.InitUpdate(nPlayerId, tLua_unit)
                     if  key == "攻击范围" then --固定属性的攻击范围特殊处理一下。
                         uAbility:set_range(value)
                     else
-                        if key ~= "EX充能次数" then
+                        if key ~= "Exchargingtimes" then
                             value = value * 1.0
                         end
                         uAbility:kv_save(key, value)

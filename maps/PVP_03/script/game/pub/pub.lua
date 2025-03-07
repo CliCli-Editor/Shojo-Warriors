@@ -37,8 +37,8 @@ local function create_bob()
     BOB.score = 10000
     if y3.game.is_debug_mode(true) then
         if os.getenv then
-            BOB.name = os.getenv('USERNAME')
-            BOB.aid = y3.hash(BOB.name)
+            -- BOB.name = os.getenv('USERNAME')
+            -- BOB.aid = y3.hash(BOB.name)
         end
         BOB.ip = '42.186.213.132'
         BOB.port = 8092
@@ -65,25 +65,8 @@ local function create_bob()
     BOB.game_play_id = '196764'
     log.debug('【BOB】手动设置game_play_id:', BOB.game_play_id)
 
-    function GetTimeAsNumbers()
-        local timeStr = os.date("%H:%M")
-        local hour, minute = timeStr:match("(%d+):(%d+)")
-        return tonumber(hour), tonumber(minute)
-    end
-    local nHour, nMinute = GetTimeAsNumbers()
-    local tTable = {4,1,3,5,2,4,1,3,5,2,1,4,2,5,3,1,4,2,5,3,2,5,1,3,4,2,5,1,3,4,5,3,2,4,1,5,3,2,4,1,3,1,5,2,4,3,1,5,2,4,1,4,2,5,3,1,4,2,5,3,2,5,1,3,4,2,5,1,3,4,2,1}
-    local nRandom = nHour * 3 + math.ceil(nMinute / 20)
-    if nRandom < 1 then
-        nRandom = 1
-    end
-    local tPVP_Map_Id = {
-        [1] = '110820841736516761627997407224785988583', --PVP地图1
-        [2] = '329014476848767048873080574908054904993', --PVP_04
-        [3] = '225071830061101721282187863364520802439', --PVP_04
-        [4] = '309196634101328253120000367900295394556', --PVP_04
-        [5] = '307813389453980271721215548408096925117'  --PVP_04
-    }
-    BOB.level_id = tPVP_Map_Id[tTable[nRandom]] --'265178097636107606569052244875827922690' --主关卡
+    BOB.level_id = Match_level_id
+
     log.debug('【BOB】手动设置level_id:', BOB.level_id)
 
     BOB:set_error_handler(function (msg, errid)
@@ -93,7 +76,7 @@ local function create_bob()
             else
                 msg = '未知错误,id:'..errid
             end
-            y3.eca.call('玩家-提示文本', local_player, msg)
+            --y3.eca.call('玩家-提示文本', local_player, msg)
         end)
     end)
 end
@@ -109,7 +92,7 @@ local function create_bob_in_lobby()
     end)
 
     BOB:event_on('客户端需要更新', function (trg)
-        y3.eca.call('系统-引擎更新')
+        --y3.eca.call('系统-引擎更新')
     end)
 
     BOB:event_on('在线状态变化', function (trg, state)
@@ -197,8 +180,8 @@ end
 
 ---设置本地玩家下次单人匹配为福利局（假匹配，自己切换到单人副本）
 function 福利局()
-    BeHappy = true
+    BeHappy = false
     if UI then
-        UI.set_welfare_mode(true)
+        UI.set_welfare_mode(BeHappy)
     end
 end

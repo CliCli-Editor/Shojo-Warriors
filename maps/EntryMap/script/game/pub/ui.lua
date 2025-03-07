@@ -328,15 +328,15 @@ end)
 
 MAIN:on_refresh('Match Game.Match_Start.text', function (ui, local_player, instance)
     if BOB.state == 'connecting' then
-        ui:set_text('connecting')
+        ui:set_text('Connecting')
     elseif BOB.state == 'disconnect' then
-        ui:set_text('disconnect')
+        ui:set_text('Disconnect')
     elseif M.is_matching() then
-        ui:set_text('cancel')
+        ui:set_text('Cancel')
     elseif M.is_launching() then
-        ui:set_text('launching')
+        ui:set_text('Launching')
     else
-        ui:set_text('Start matching')
+        ui:set_text('Play')
     end
 end)
 

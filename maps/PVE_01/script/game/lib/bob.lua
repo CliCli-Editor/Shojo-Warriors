@@ -1,5 +1,3 @@
-local work = require 'pub.core.service.client'
-
 ---@diagnostic disable-next-line: deprecated
 local local_player = y3.player.get_local()
 
@@ -310,6 +308,7 @@ function M:get_team_info(aid, response)
                 log.debug('【BOB】获取队伍信息失败：', error_code)
             end
             response(nil)
+            return
         end
         local team_info = self:convert_team_info(result)
         log.debug('【BOB】获取队伍信息成功：', y3.inspect(team_info))
@@ -488,6 +487,9 @@ function M:notify_update_team_info(data)
         local old_team_info = self.team_info
         self.team_info = new_team_info
         log.debug('【BOB】触发队伍变化', y3.inspect(new_team_info))
+        if not new_team_info then
+            return
+        end
         self:event_notify('队伍变化', new_team_info)
 
         if not old_team_info or old_team_info.team_id ~= new_team_info.team_id then
